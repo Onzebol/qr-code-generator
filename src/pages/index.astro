@@ -6,11 +6,48 @@ const title = "QR Code Generator"
 
 <Layout title={title}>
 	<main class="min-h-screen grid place-content-center">
-		<div class="bg-white rounded-2xl w-80 p-4 flex flex-col gap-4 text-center">
-			<picture class="self-center">
-				<img class="overflow-hidden" src="data:image/png;base64,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" />
-			</picture>
+		<div class="bg-white rounded-2xl w-80 p-4 flex flex-col gap-4">
+			<img id="qrcode" />
 			<h1 class="text-2xl font-bold">{title}</h1>
+			<form>
+				<label class="block mb-2">
+					Text
+					<input name="text" class="w-full border-2 border-gray-300 rounded-md p-2">
+				</label>
+				<label class="block mb-2">
+					Dark color
+					<input type="color" name="dark" value="#000000" class="w-full" />
+				</label>
+				<label class="block mb-2">
+					Light color
+					<input type="color" name="light" value="#ffffff" class="w-full" />
+				</label>
+				<button class="w-full bg-blue-400 rounded-md p-2 text-white">Send</button>
+			</form>
 		</div>
 	</main>
 </Layout>
+
+<script>
+	const form = document.querySelector("form");
+	form?.addEventListener("submit", function(e){
+		e.preventDefault();    //stop form from submitting
+		const text = e.target[0].value;
+		const dark = e.target[1].value;
+		const light = e.target[2].value;
+
+		fetch("api/generate-qr", {
+			method: "POST",
+			body: JSON.stringify({ text, dark, light }),
+			headers: {
+				"Content-Type": "application/json"
+			}
+		})
+		.then((res) => res.json())
+		.then((data) => {
+			const { svg } = data;
+			const qrcode = document.querySelector("#qrcode");
+			qrcode.src = 'data:image/svg+xml;base64,' + btoa(svg);
+		});
+	});
+</script>
